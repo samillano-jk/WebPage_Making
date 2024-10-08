@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta viewport="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Survey Form</title>
+    </head>
+
+    
+    <body>
+        <div class="stars"> </div>
+            <div class="head">
+                <h1 id="title">JKSS' Services</h1>
+                <p id="description"><em>Delivers quality tech services</em></p>
+            </div>
+
+            <form id="survey-form">
+                <hr>
+                <!-- Customers info -->
+                <fieldset>
+                    
+                    <label for="name" id="name-label" class="block none">Name <input type="text" required id="name" class="block margin" placeholder="Enter your name"> </label>
+                    <label for="email" id="email-label" class="block none">Email <input type="email" required id="email" class="block margin" placeholder="Enter your email"> </label>
+                    <label for="number" id="number-label" class="block none">Age <i>(optional)</i> <input type="number" min="13" max="100" id="number" class="block margin" placeholder="Enter your age"> </label>
+
+                    <!-- <p class="sex">Sex</p> -->
+                    <label>Sex: <input type="radio" name="gender"  value="0" checked> Male</label>
+                    <label><input type="radio" name="gender" value="1"> Female</label>
+
+
+                    <label for="dropdown" class="block none" >What describes your current role the most?
+                    <select name="" id="dropdown" required  class="block margin">
+                        <option value="" disabled selected>Select Role</option>
+                        <option value="1">Business Owner</option>
+                        <option value="2">Employee</option>
+                        <option value="3">Freelancer</option>
+                        <option value="4">Student</option>
+                        <option value="5">Other</option>
+                    </select>
+                    </label>
+                </fieldset>
+
+                <hr>
+
+
+                <!-- Services offered -->
+                <fieldset>
+                    <legend>Services</legend>
+                    <label for="collect" class="block none"><input type="checkbox" id="collect" value="1"><span>Data Collection</span></label>
+                    <label for="clean" class="block none"><input type="checkbox" id="clean" value="2"><span>Data Cleaning & Transformation</span></label>
+                    <label for="analyze" class="block none"><input type="checkbox" id="analyze" value="3"><span>Data Analysis</span></label>
+                    <label for="visualize" class="block none"><input type="checkbox" id="visualize" value="4"><span>Data Visualization</span></label>
+                    <label for="form-page" class="block none"><input type="checkbox" id="form-page" value="5"><span>Survey Form Page</span></label>               
+                </fieldset>
+
+                <hr>
+
+                <!-- Input -->
+
+                <fieldset>
+                    <label for="deadline" class="block none">When do you need the deliverable/s?<input type="date" id="deadline" required class="block margin" max="2050-01-01"></label>
+                    <label for="upload-file" class="block none">Upload Dataset<input type="file" accept=".csv, .xlsx, .txt, .json, .html, .db" id="upload-file" class="block margin"></label>
+
+                    <label for="user-comment" class="block none">Comment: <textarea name="comment" rows="5" id="user-comment" class="text-area"></textarea></label>
+                    
+                </fieldset>
+
+                <hr> 
+
+                <label for="terms" class="block none" name="terms-and-cond"><input type="checkbox" required id="terms" value="1"> I agree to the <a href="#top">terms and conditions</a></label>
+                <input type="submit" value="Submit" id="submit">
+
+
+            </form>
+        
+        <footer>
+            <p class="footnote">The Data Inquisitor</p>
+        </footer>
+            
+        <script>
+            // Set today's date as the minimum date for the deadline input
+            document.getElementById('deadline').setAttribute('min', new Date().toISOString().split('T')[0]);
+        </script>
+        
+    </body>
+
+
+    
+       
+
+</html>
