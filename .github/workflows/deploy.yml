@@ -1,0 +1,40 @@
+name: Deploy My Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the action when changes are pushed to `main` (or the branch you're working with)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (optional)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Deploy My Portfolio to GitHub Pages
+        run: |
+          # Create the directory for the gh-pages branch
+          mkdir gh-pages
+          
+          # Copy the content from 'My-Portfolio' to the gh-pages directory
+          cp -R My-Portfolio/* gh-pages/
+          
+          # Navigate to the gh-pages folder
+          cd gh-pages
+          
+          # Initialize git and push to the gh-pages branch
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy My Portfolio"
+          git branch -M main
+          git remote add origin https://github.com/username/repository-name.git
+          git push --force origin main:gh-pages  # Push the content to the gh-pages branch
