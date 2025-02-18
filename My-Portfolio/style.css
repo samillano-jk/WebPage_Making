@@ -1,0 +1,467 @@
+/* Tags */
+
+
+
+
+
+/* Classes */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Whole Background */
+.whole-page {
+    background-color: #e5c185;
+    height: 550vh;
+}
+
+/* For Sections */
+.sections {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+
+
+
+/* For home section layout */
+.home-layout {
+    display: flex;
+    height: 100%;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    overflow: hidden;
+    
+}
+
+.home-layout .left {
+    width: 30%;
+    background-color: #d68a58; 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+.home-layout .left .home-img-container {
+    border-radius: 50%;
+    height: 35%;
+    width: 60%;
+    background-color: #e5c185;
+    overflow: hidden;
+}
+
+.home-layout .left .home-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-layout .right {
+    width: 70%;
+    background-color: #3a978c;
+    align-content: center;
+    padding-left: 5%;
+    object-fit: cover;
+    
+}
+
+.home-layout .right .name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color: rgb(233, 233, 233);
+}
+
+.home-layout .right .summary {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: rgb(233, 233, 233);
+
+}
+
+
+
+
+
+/* For profile section layout */
+.profile-layout {
+    width: 100%;
+    height: 100%;
+    justify-items: left;
+    padding: 15vh 10vh 20vh 15vh;
+    
+}
+
+.profile-layout .profile-intro {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5vw;
+    margin-top: 2rem;
+    padding: 1rem;
+    animation: bounce 8s infinite;
+    
+}
+
+.profile-layout .profile-desc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    padding-left: 1rem;
+}
+
+
+
+/* For skills section layout */
+.skills-layout {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #923d20 0% ,  #884b23 40%, #b46a39 70%, #923d20 30%);
+    padding: 2rem;
+    color: rgb(219, 218, 218);
+}
+
+
+/* Skills Container */
+.skills-container {
+    height: 40%;
+    width: 100%;
+    /* background-color: grey; */
+    padding: 1rem;
+
+
+}
+
+.skills-title {
+    width: 100%;
+    height: 30%;
+    justify-self: center;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7vh;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    color: #923d20;
+}
+
+.skills-sun {
+    z-index: 0;
+    height: 8.5rem;
+    width: 8.5rem;
+    top: -40%;
+    justify-self: center;
+    position: relative;
+    background-color: #e5c185;
+    border: 2px solid #e5c185;
+    border-radius: 50%;
+    animation: glow 10s infinite;
+}
+
+.skills-list {
+    top: -40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    font-size: 7vh;
+
+}
+.skill-item {
+    width: 25%;
+    height: 10%; 
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+.white-text {
+    color: #d4beaf;
+}
+
+
+/* Technologies Container */
+.techs-container {
+    height: 30%;
+    width: 100%;
+    /* background-color: rgb(180, 125, 125); */
+    padding: 1rem;
+}
+.techs-title {
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7vh;
+    align-content: center;
+    text-align: center;
+}
+.techs-div {
+    padding: 1rem;
+    height: 60%;
+    align-content: center;
+    justify-self: center;
+}
+
+
+/* Certificates Container */
+.certs-container {
+    height: 30%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.certs-div {
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+
+}
+.certs-title {
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7vh;
+    text-align: center;
+    /* background-color: grey; */
+}
+.certs-div a {
+    color: white;
+    text-decoration: none;
+}
+.certs-div a:visited {
+    color: #ffd7bc;
+}
+.certs-div a:hover {
+    color: #3a978c;
+} 
+
+
+
+
+
+/* For projects section layout */
+.projects-layout {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    max-height: 100%;
+}
+
+.projects-title {
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    font-size: 400%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .5rem;
+}
+
+.carousel-container {
+    height: 85%;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;  
+    padding-top: 2.5rem;  
+    padding-bottom: 2.5rem;  
+    background-color: #017474;
+    align-content: center;
+}
+
+.carousel-item {
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item.active {
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.proj-img {
+    height: 70%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+/* For contact section layout */
+.contact-layout {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact-title {
+    font-size: 4rem;
+    
+}
+.socials-contact {
+    padding: 6rem;
+    display: flex;
+    justify-self: center;
+    gap: 1.5rem;
+    
+}
+.icon-social {
+    color: rgb(48, 48, 48);
+}
+.icon-social:active {
+    color: rgb(22, 22, 22);
+}
+.icon-social:visited {
+    color: rgb(20, 20, 20);
+}
+
+
+
+
+
+
+
+/* IDs */
+
+/* Custom styles for inactive nav links */
+#pillNav2 .nav-link {
+    color: #272727; /* Dark gray text for inactive tabs */
+    letter-spacing: .1rem;
+}
+
+/* Custom styles for active nav link */
+#pillNav2 .nav-link.active {
+    color: #fbf2c4; /* Tomato red text for active tab */
+    background-color: #d68a58; /* Light yellow background for active tab */
+}
+
+/* Optional: Change background color for the whole nav */
+#pillNav2 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #fbf2c4; /* Light blue background */
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .1rem;
+    font-size: 1.2rem;    
+}
+
+#pillNav2.hidden {
+    transform: translateY(-100%);
+}
+
+#pillNav2 .nav-link:hover {
+    border-bottom: 2px solid #7a591b; 
+}
+
+/* Home Section */
+.sections #home {
+    width: 100%;
+    height: 18%;
+    background-color: #e5c185;
+}
+
+/* Profile Section */
+.sections #profile {
+    width: 100%;
+    height: 19%;
+    background-color: #3a978c;
+}
+
+/* Skills Section */
+.sections #skills {
+    width: 100%;
+    height: 22%;
+    background-color: #3a978c;
+}
+
+/* Projects Section */
+.sections #projects {
+    width: 100%;
+    height: 21%;
+    background-color: #008585;
+}
+
+/* Contact Section */
+.sections #contact {
+    width: 100%;
+    height: 19%;
+    background-color: #3a978c;
+}
+
+
+
+
+
+
+/* Animations */
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0px 2px 5px #e5c185; 
+    }
+    25%, 75% {
+        box-shadow: 0px 2px 90px #e5c185; 
+    }
+    50% {
+        box-shadow: 0px 2px 150px #e5c185; 
+    }
+  }
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.85);
+    }
+}
+
+/* Animation for the typing profile description and intro */
+@keyframes typing {
+    from {
+      width: 0;
+      opacity: 1;
+    }
+    to {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Typing animation class */
+  .typing {
+    animation: typing 3s steps(30) 0s forwards, blink 0.75s step-end infinite;
+  }
